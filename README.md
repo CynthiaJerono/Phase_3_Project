@@ -2,10 +2,11 @@
 # TANZANIA WATER WELLS
 
 ![Image](image.png)
-
+#Image source google stock images.istockphoto.com
 
 Phase 3 Project
 
+#Please note that i ahve 2 ipynbs.
 
 ## Overview
 
@@ -76,7 +77,7 @@ A number of the features overlap, including **waterpoint_type** and **waterpoint
 
 ## 4. Modeling
 
-The "status_group" variable was my target I changed it from ternery into a binary format, typically indicating whether a water well is functional or non-functional, the categories "non- functional" and "functional needs repair" can be combined into a single category representing non-functional wells, while "functional" remains unchanged. I Label-Encoded the categorical variables and categorised the target.  Our baseline model was Dummy Classifier with the StandardScaler as our scaler, just to test how our chosen attributes would perform on a basic level. We then explored other more sophisticated models like the Decision trees, K-Nearest -Neighbours, SVM and Random Forest.
+The "status_group" variable was my target I changed it from ternery into a binary format, typically indicating whether a water well is functional or non-functional, the categories "non- functional" and "functional needs repair" can be combined into a single category representing non-functional wells, while "functional" remains unchanged. I Label-Encoded the categorical variables and categorised the target.  Our baseline model was Dummy Classifier with the StandardScaler as our scaler, just to test how our chosen attributes would perform on a basic level. We then explored other more sophisticated models like the Decision trees,  Decision Tree with GridsearchCV,Support Vector Machine (SVM) classifier, K-Nearest Neighbors,K-Nearest Neighbors with grid search,Logistic regression. It was low at first giving 0.59 so perfoming feature engineering improved the moved accuracy by 14 % t0 0.73.
 
 ---
 
@@ -88,9 +89,16 @@ I used pipelines to scale the data and then fit it to the model. We then used cr
 
 ## 6. Conclusion
 
-The accuracy of my random forest classifier and KNearest Neighbors Classifier was 78% and 77% respectively. While it is still a good predictive model, I would like to undertake further feature engineering to boost the recall scores if I had more time. I achieved our bjectives to be able to predict the functional wells and had a conclusive accuracy score.
+In conclusion, the findings suggest several important considerations for stakeholders when planning the construction and maintenance of wells in Tanzania. The Dodoma region has a higher number of non-functional wells compared to functional ones, indicating a need for careful assessment and investigation into the causes and potential solutions before building new wells. Data analysis shows that wells with operating permits tend to remain functional longer than those without permits, highlighting the importance of regulatory compliance. Furthermore, wells that are not associated with any payment plan often become inoperable due to public misuse; therefore, implementing a reasonable payment plan could help maintain well functionality. To ensure sustainable water access, stakeholders should focus on regions with higher failure rates, verify that all wells have the necessary permits, and consider the establishment of payment plans to enhance the viability of the wells.
+
 
 ## 7. Recommendations
 
-The Lake Rukwa basin area, where there are considerably more non-functional wells than functional ones, may be worth considering for our stakeholders when they decide to build more wells in Tanzania. There are more non-functional wells than functioning ones in the Dodoma region; this situation has to be investigated. Over the course of time, wells with operating permission typically become more viable and useful than those without. Due to possible public misuse, unpaid wells frequently become inoperable; perhaps creating a reasonable payment plan will help stop this. Because wells without permissions also have a higher likelihood of becoming inoperable, our stakeholder must verify that they have permits to ensure that they are acceptable.
+1.Regular Maintenance and Repairs: To ensure continuous access to water, it is crucial to implement a robust maintenance schedule for functional wells and promptly repair those classified as needing repair or non-functional. Predictive maintenance, using insights from data analysis, can help optimize resource allocation and minimize pump downtime.
+
+2.Improved Data Collection and Management: Enhance data collection practices to include more accurate and up-to-date information on well status, location, and usage. This will help in better decision-making and resource distribution for maintenance and repairs.
+
+3.Community Involvement and Training: Engage local communities in the maintenance and management of water points. Training local users and managers can lead to quicker identification and reporting of issues, promoting sustainability and ownership.
+
+4.Use of Advanced Machine Learning Models: The project should consider using advanced machine learning models like Random Forest or Gradient Boosting for better predictive accuracy regarding well functionality. Hyperparameter tuning, as done with GridSearchCV in the study, can further improve model performance.
 
